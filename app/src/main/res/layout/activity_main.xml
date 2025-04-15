@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainTV"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="157dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="3dp"
+        android:text=" Введите 2 числа"
+        app:layout_constraintBottom_toTopOf="@+id/secondET"
+        app:layout_constraintEnd_toEndOf="@+id/secondET"
+        app:layout_constraintStart_toStartOf="@+id/firstET"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/firstET"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/sumTV"
+        app:layout_constraintEnd_toStartOf="@+id/secondET"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTV"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/secondET"
+        android:layout_width="90dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="489dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstET"
+        app:layout_constraintTop_toBottomOf="@+id/mainTV"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/sumTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Сумма: "
+        app:layout_constraintBottom_toTopOf="@+id/minusTV"
+        app:layout_constraintStart_toStartOf="@+id/firstET"
+        app:layout_constraintTop_toBottomOf="@+id/firstET" />
+
+    <TextView
+        android:id="@+id/minusTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Разница: "
+        app:layout_constraintBottom_toTopOf="@+id/multiTV"
+        app:layout_constraintStart_toStartOf="@+id/sumTV"
+        app:layout_constraintTop_toBottomOf="@+id/sumTV" />
+
+    <TextView
+        android:id="@+id/multiTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:text="Умножение: "
+        app:layout_constraintBottom_toTopOf="@+id/deplyTV"
+        app:layout_constraintStart_toStartOf="@+id/minusTV"
+        app:layout_constraintTop_toBottomOf="@+id/minusTV" />
+
+    <TextView
+        android:id="@+id/deplyTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:text="Деление: "
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/multiTV"
+        app:layout_constraintTop_toBottomOf="@+id/multiTV" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="230dp"
+        android:onClick="onClick"
+        android:text="Вычислить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deplyTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
